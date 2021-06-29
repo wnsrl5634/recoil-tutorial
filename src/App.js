@@ -1,28 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import { Selector } from './Components/SyncAtomExample';
-import { TextContainer } from './Components/TextContainer';
-import { Label } from './Components/Label';
-import { InputExample } from './Components/InputExample';
+import { SyncExample } from './Components/SyncExample';
+import { AsyncExample } from './Components/AsyncExample';
 
 function App() {
+  const [toggle, setToggle] = useState(false);
+
   return (
     <div className="App">
-      <hr />
-      <h1>Font Selector</h1>
-      <Selector items={[20, 24, 40, 60]} />
-      <hr />
-      <h1>Current Font Value</h1>
-      <TextContainer />
-      <hr />
-      <h1>Font 적용된 컴포넌트</h1>
-      <Label text={'Hello, World'} />
-      <hr />
-      <h1>Selector Setting</h1>
-      <div>
-        <InputExample />
+      <div
+        style={{
+          margin: '20px',
+        }}
+      >
+        <button onClick={() => setToggle(!toggle)}>
+          {toggle ? 'Go to Async' : 'Go to Sync'}
+        </button>
       </div>
-      <hr />
+      {toggle ? <SyncExample /> : <AsyncExample />}
     </div>
   );
 }
