@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRecoilValue } from 'recoil';
-import { fontSizeState } from '../Atoms/Atom';
+import { fontSizeState } from '../Atoms/FontSizeAtom';
 
 export const Label = (props) => {
   const { text } = props;

@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { useRecoilState } from 'recoil';
-import { CurrentFontSizeAtom } from '../Atoms/Atom';
+import { FontSizeAtom } from '../Atoms/FontSizeAtom';
 
-export const Selector = (props) => {
+export const SyncAtomExample = (props) => {
   const { items } = props;
   const [currentFrontSizeAtom, setCurrentFrontSizeAtom] =
-    useRecoilState(CurrentFontSizeAtom);
+    useRecoilState(FontSizeAtom);
   const handleClick = (select) => {
     setCurrentFrontSizeAtom(select);
   };

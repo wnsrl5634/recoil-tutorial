@@ -1,18 +1,18 @@
 import { atom, selector } from 'recoil';
 
-export const CurrentFontSizeAtom = atom({
-  key: 'CurrentFontSizeAtom',
+export const FontSizeAtom = atom({
+  key: '@FontSizeAtom',
   default: null,
 });
 
 export const fontSizeState = selector({
-  key: 'fontSizeState',
+  key: '@FontSizeAtom/fontSizeState',
   get: ({ get }) => {
-    const fontSize = get(CurrentFontSizeAtom);
+    const fontSize = get(FontSizeAtom);
     const unit = 'px';
     return `${fontSize}${unit}`;
   },
   set: ({ set }, newValue) => {
-    set(CurrentFontSizeAtom, newValue);
+    set(FontSizeAtom, newValue);
   },
 });

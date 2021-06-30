@@ -1,12 +1,12 @@
 import React from 'react';
 import { useRecoilValue } from 'recoil';
-import { CurrentFontSizeAtom } from '../Atoms/Atom';
+import { FontSizeAtom } from '../Atoms/FontSizeAtom';
 
 export const TextContainer = () => {
-  const currentFontSizeAtom = useRecoilValue(CurrentFontSizeAtom);
+  const fontSize = useRecoilValue(FontSizeAtom);
   return (
     <div>
-      <h1>{currentFontSizeAtom}</h1>
+      <h1>font size: {fontSize}</h1>
     </div>
   );
 };

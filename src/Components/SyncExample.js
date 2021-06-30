@@ -1,15 +1,15 @@
 import React from 'react';
-import { Selector } from './SyncAtomExample';
+import { SyncAtomExample } from './SyncAtomExample';
 import { TextContainer } from './TextContainer';
 import { Label } from './Label';
 import { InputExample } from './InputExample';
 
 export const SyncExample = () => {
   return (
-    <>
+    <div>
       <hr />
       <h1>Font Selector</h1>
-      <Selector items={[20, 24, 40, 60]} />
+      <SyncAtomExample items={[20, 24, 40, 60]} />
       <hr />
       <h1>Current Font Value</h1>
       <TextContainer />
@@ -22,6 +22,6 @@ export const SyncExample = () => {
         <InputExample />
       </div>
       <hr />
-    </>
+    </div>
   );
 };

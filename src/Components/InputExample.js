@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSetRecoilState } from 'recoil';
-import { fontSizeState } from '../Atoms/Atom';
+import { fontSizeState } from '../Atoms/FontSizeAtom';
 
 export const InputExample = () => {
   const setFontSize = useSetRecoilState(fontSizeState);
